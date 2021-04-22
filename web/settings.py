@@ -26,7 +26,7 @@ SECRET_KEY = 'n82tx%mw9hu2(ei6c)9iy!@+5#6bu3xbv81b_d=4#o3p8*x430' # секрет
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [] # те доменные имена на которых можно опубликовать проект
+ALLOWED_HOSTS = ['aqueous-cove-75575.herokuapp.com'] # те доменные имена на которых можно опубликовать проект
 
 
 # Application definition
