@@ -1,0 +1,123 @@
+body {
+
+    background: linear-gradient(45deg, midnightblue, rgba(179, 26, 57, 0.897));
+    
+}  
+aside{
+    float:left;
+    background:linear-gradient(75deg,rgb(30, 100, 60), rgba(63, 5, 104, 0.76));
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: rgb(0, 0, 0);
+    border-right: 5px solid rgb(37, 30, 85);
+    
+}
+aside img{
+    width: 80px;
+    float: left;
+}
+aside .logo{
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: bold;
+    position: relative;
+    top: -5px;
+
+}
+aside h3{
+    margin-top: 50px;
+    font-size: 25px;
+    color: skyblue;
+    text-shadow: black 2 2 3px;
+
+}
+.h3, h3 {
+    font-size: 22px;
+}
+aside ul{
+    list-style: none;
+}
+div li{
+    list-style: none;
+}
+aside ul li{
+    font-size: 18px;
+    color: whitesmoke;
+    display: block;
+    margin-top: 10px;
+    transition: transform .1s ease;
+}
+
+aside ul li:hover,aside ul a:hover{
+    color: khaki;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+main .features{
+    float: left;
+    color: #eaf4f5;
+    text-shadow: black 0 0 2px;
+    margin-top: 100px;
+    text-align: center;
+    width: 75%;
+}
+main .features h1{
+    font-weight: bold;
+    font-size: 30px;
+}
+main .features p{
+    max-width: 600px;
+    
+    margin: 20px auto;
+    font-size: 19px;
+}
+main .features button{
+    background-color: limegreen;
+    border-color: limegreen;
+    transition: transform .1s ease;
+}
+main .features button:hover{
+    transform: scale(1.05);
+    background-color: rgba(162, 232, 255, 0.74);
+}
+.alert-warning {
+    float:left;
+    clear:both;
+    width: 400px;
+    margin: 20px 34%;
+    text-align: left;
+    color: whitesmoke;
+    text-shadow: black 2 2 3px;
+    background: linear-gradient(45deg, rgba(179, 26, 57, 0.897), midnightblue);
+    border-color: tomato;
+}
+form {
+    margin-left: 27%;
+    width: 550px;
+    margin-top: 50px;
+    
+
+}
+.login{
+    background-color: coral;
+}
+.login:hover{
+    background-color: rgb(243, 85, 28);
+}
+.exit{
+    background-color: indianred;
+}
+.exit:hover{
+    background-color: rgb(187, 60, 60);
+}
+.registr{
+    background-color: rgb(80, 201, 80);
+}
+.registr:hover{
+    background-color: rgb(46, 139, 46);
+}
+.sidebar{
+    position:absolute;
+    bottom: 0px;
+}

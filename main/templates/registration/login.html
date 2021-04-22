@@ -1,0 +1,35 @@
+{% extends 'main/pattern.html' %}
+
+
+{% block title %}Login{% endblock %} 
+
+{% block content %}
+    <div class="features">
+        <h1>Login</h1>
+
+        {% if form.errors %}
+            <p>Your username and password didn't match. Please try again.</p>
+        {% endif %}
+        {% if next %}
+            {% if user.is_authenticated %}
+                <p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
+            {% else %}
+                <p>Please login to see this page.</p>
+            {% endif %}
+        {% endif %}
+        
+        <form method="post">
+            {% csrf_token %} 
+            {{ form.username.label_tag }} {{ form.username }}<br>   
+            {{ form.password.label_tag }} {{ form.password }}<br>
+            
+
+
+            <button class="btn btn-sucess" type="submit">Login</button>
+            <input type="hidden" name="next" value="{{ next }}" />
+
+        </form>            
+        <span>{{ error }}</span>
+
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends 'main/pattern.html' %}
+
+
+{% block title %}Sports news{% endblock %} 
+
+{% block content %}
+    <div class="features">
+        <h1>Sports News</h1>
+        
+        {% if news %}       
+            {% for item in news%}
+                <div class="alert alert-warning">
+                    <h3>{{ item.tittle }}</h3>
+                    
+                    <p>{{ item.anons }}</p>
+                    <p>{{ item.data }}</p>
+                    <ul>
+                    <a href="{% url 'news-detail' item.id %}" ><li><button class="btn btn-warning"><i class="fas fa-book"></i>Читать далее...</li></a>
+                    </ul>
+                    
+                </div>
+            {% endfor %}
+        {% else %}
+        <p>Нет новостей</p>
+        {% endif %}
+    </div>
+{% endblock %}

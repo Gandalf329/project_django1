@@ -1,0 +1,16 @@
+{% extends 'main/pattern.html' %}
+
+
+{% block title %}Delete sports news{% endblock %} 
+
+{% block content %}
+    <div class="features">
+        <h1>Delete sports news</h1>
+        <form method="post">
+            {% csrf_token %}    
+
+
+            <button class="btn btn-sucess" type="submit">Delete News</button>
+        </form>           
+    </div>
+{% endblock %}

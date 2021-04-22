@@ -1,0 +1,23 @@
+{% extends 'main/pattern.html' %}
+
+
+{% block title %}Create sports news{% endblock %} 
+
+{% block content %}
+    <div class="features">
+        <h1>Create sports news</h1>
+        <form method="post">
+            {% csrf_token %}    
+            {{ form.tittle }}<br>
+            {{ form.anons }}<br>
+            {{ form.full_text }}<br>
+            {{ form.data }}<br>
+            
+            
+            <button class="btn btn-sucess" type="submit">Add News</button>
+
+        </form>            
+        <span>{{ error }}</span>
+
+    </div>
+{% endblock %}

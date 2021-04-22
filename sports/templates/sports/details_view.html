@@ -1,0 +1,22 @@
+{% extends 'main/pattern.html' %}
+
+
+{% block title %}Sports news{% endblock %} 
+
+{% block content %}
+    <div class="features">
+        <h1>{{ article.tittle }}</h1>
+        
+        <p>{{ article.data }}</p>
+        <p>{{ article.full_text }}</p>    
+        
+        {% if user.is_authenticated %}
+        <a href="{% url 'news-delete' article.id %}"><li><button class="btn btn-danger"><i class="fas fa-trash-alt"></i>Delete news</li></a><br>
+        <a href="{% url 'news-update' article.id %}"><li><button class="btn btn-info"><i class="far fa-edit"></i>Edit news</li></a>
+   {% else %}
+        <a>Для редактирования или удаления статьи надо авторизоваться</a>
+   {% endif %} 
+
+    
+    </div>
+{% endblock %}
